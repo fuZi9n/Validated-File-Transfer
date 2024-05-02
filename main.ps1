@@ -9,8 +9,14 @@ $destination = '/home/batman/Documents/GitHub/file.txt'
 $destinationTest = Test-Path $destination
 
 if ($sourceTest -eq $true) {
-    Write-Host "The path is valid"
+    Write-Host "The source path is valid"
 }
 elseif (($sourceTest -eq $false)) {
-    Write-Host "The path is not valid"
+    Write-Host "The source path is not valid, please check path input!"
+}
+elseif ($destinationTest -eq $true) {
+    Write-Host "The destination path is valid"
+}
+elseif ($destinationTest -eq $false) {
+    Write-Host "The destination path is not valid, please check path input!"
 }
